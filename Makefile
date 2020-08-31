@@ -1,12 +1,12 @@
-CC=gcc
-CFLAGS=-Wall -O
-LDFLAGS=
+CC ?= gcc
+CFLAGS ?= -Wall -O
+LDFLAGS ?=
 EXEC=hello
 SRC=$(wildcard src/*.c)
 OBJ=$(SRC:.c=.o)
 
 ifeq ($(PREFIX),)
-	PREFIX := /usr/local
+	PREFIX ?= /usr/local
 endif
 
 all: $(EXEC)
