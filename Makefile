@@ -4,10 +4,7 @@ LDFLAGS ?=
 EXEC=hello
 SRC=$(wildcard src/*.c)
 OBJ=$(SRC:.c=.o)
-
-ifeq ($(PREFIX),)
-	PREFIX ?= /usr/local
-endif
+PREFIX ?= /usr/local
 
 all: $(EXEC)
 
